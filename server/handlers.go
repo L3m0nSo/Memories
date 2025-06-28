@@ -1,19 +1,20 @@
 package server
 
 import (
+	"io"
+	"net/http"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/database"
+	"github.com/L3m0nSo/Memories/server/fsm"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/database"
-	"github.com/daptin/daptin/server/fsm"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/daptin/daptin/server/statementbuilder"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	log "github.com/sirupsen/logrus"
-	"io"
-	"net/http"
 )
 
 func CreateEventHandler(initConfig *resource.CmsConfig, fsmManager fsm.FsmManager, cruds map[string]*resource.DbResource, db database.DatabaseConnection) func(context *gin.Context) {

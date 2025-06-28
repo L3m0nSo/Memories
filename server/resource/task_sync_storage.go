@@ -3,14 +3,15 @@ package resource
 import (
 	"context"
 	"fmt"
+	"strings"
+
+	"github.com/L3m0nSo/Memories/server/rootpojo"
 	"github.com/artpar/rclone/cmd"
 	"github.com/artpar/rclone/fs"
 	"github.com/artpar/rclone/fs/config"
 	"github.com/artpar/rclone/fs/sync"
 	"github.com/artpar/rclone/lib/pacer"
-	"github.com/daptin/daptin/server/rootpojo"
 	"github.com/jmoiron/sqlx"
-	"strings"
 
 	//hugoCommand "github.com/gohugoio/hugo/commands"
 	log "github.com/sirupsen/logrus"

@@ -3,16 +3,17 @@ package resource
 import (
 	"context"
 	"fmt"
+	"strings"
+	"time"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
 	"github.com/artpar/api2go/v2"
 	"github.com/buraksezer/olric"
-	"github.com/daptin/daptin/server/auth"
-	daptinid "github.com/daptin/daptin/server/id"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/google/uuid"
 	"github.com/jmoiron/sqlx"
 	"github.com/pkg/errors"
-	"strings"
-	"time"
 
 	//"strings"
 	log "github.com/sirupsen/logrus"

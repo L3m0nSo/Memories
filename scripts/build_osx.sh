@@ -26,7 +26,7 @@ cp -Rf daptinweb/dist docker_dir/static
 cp Dockerfile docker_dir/Dockerfile
 
 cd docker_dir
-docker build -t daptin/daptin  .
+docker build -t L3m0nSo/Memories  .
 
 cd ..
 docker images | grep daptin | grep latest

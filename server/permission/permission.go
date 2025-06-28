@@ -3,8 +3,9 @@ package permission
 import (
 	"encoding/binary"
 	"fmt"
-	"github.com/daptin/daptin/server/auth"
-	daptinid "github.com/daptin/daptin/server/id"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
 )
 
 type PermissionInstance struct {

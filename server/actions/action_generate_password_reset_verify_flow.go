@@ -2,9 +2,10 @@ package actions
 
 import (
 	"encoding/base64"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/resource"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/google/uuid"

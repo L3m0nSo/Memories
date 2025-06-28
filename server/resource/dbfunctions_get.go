@@ -3,18 +3,19 @@ package resource
 import (
 	"context"
 	"fmt"
+	"strconv"
+	"strings"
+	"time"
+
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/rootpojo"
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
+	"github.com/L3m0nSo/Memories/server/task"
 	"github.com/buraksezer/olric"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/rootpojo"
-	"github.com/daptin/daptin/server/statementbuilder"
-	"github.com/daptin/daptin/server/task"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
-	"strconv"
-	"strings"
-	"time"
 )
 
 func GetObjectByWhereClauseWithTransaction(objType string, transaction *sqlx.Tx, queries ...goqu.Ex) ([]map[string]interface{}, error) {

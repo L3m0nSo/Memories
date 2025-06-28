@@ -2,11 +2,6 @@ package server
 
 import (
 	"fmt"
-	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/cache"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/gin-gonic/gin"
-	log "github.com/sirupsen/logrus"
 	"io"
 	"net/http"
 	"os"
@@ -14,6 +9,12 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/L3m0nSo/Memories/server/cache"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/artpar/api2go/v2"
+	"github.com/gin-gonic/gin"
+	log "github.com/sirupsen/logrus"
 )
 
 func AssetRouteHandler(cruds map[string]*resource.DbResource) func(c *gin.Context) {

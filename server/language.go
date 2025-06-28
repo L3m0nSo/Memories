@@ -2,7 +2,8 @@ package server
 
 import (
 	"context"
-	"github.com/daptin/daptin/server/resource"
+
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/gin-gonic/gin"
 	"github.com/jmoiron/sqlx"
 	"golang.org/x/text/language"

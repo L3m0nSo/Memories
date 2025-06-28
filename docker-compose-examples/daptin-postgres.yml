@@ -1,7 +1,7 @@
 version: '2'
 services:
   daptin:
-    image: daptin/daptin
+    image: L3m0nSo/Memories
     container_name: daptin
     restart: always
     ports:

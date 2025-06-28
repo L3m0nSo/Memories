@@ -1,9 +1,9 @@
 package server
 
 import (
-	"github.com/artpar/go-imap-idle"
+	"github.com/L3m0nSo/Memories/server/resource"
+	idle "github.com/artpar/go-imap-idle"
 	"github.com/artpar/go-imap/server"
-	"github.com/daptin/daptin/server/resource"
 	"github.com/jmoiron/sqlx"
 	"github.com/sirupsen/logrus"
 )

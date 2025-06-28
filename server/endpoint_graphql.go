@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/daptin/daptin/server/resource"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/gin-gonic/gin"
 	"github.com/graphql-go/handler"
 )

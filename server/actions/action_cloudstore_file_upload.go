@@ -5,28 +5,30 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
+	sync2 "sync"
+	"time"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/artpar/rclone/cmd"
 	"github.com/artpar/rclone/fs"
 	"github.com/artpar/rclone/fs/accounting"
 	"github.com/artpar/rclone/fs/filter"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/resource"
 	"github.com/google/uuid"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	sync2 "sync"
-	"time"
 
 	//"os"
 	"archive/zip"
-	"github.com/artpar/api2go/v2"
-	"github.com/artpar/rclone/fs/config"
-	"github.com/artpar/rclone/fs/sync"
 	"io"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/artpar/api2go/v2"
+	"github.com/artpar/rclone/fs/config"
+	"github.com/artpar/rclone/fs/sync"
 )
 
 type fileUploadActionPerformer struct {

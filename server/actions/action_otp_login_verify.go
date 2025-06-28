@@ -3,24 +3,26 @@ package actions
 import (
 	"context"
 	"fmt"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/auth"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
+	"net/http"
+	"net/url"
+	"strings"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/auth"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/google/uuid"
 	"github.com/jmoiron/sqlx"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	"net/http"
-	"net/url"
-	"strings"
 
 	//"golang.org/x/oauth2"
+	"time"
+
 	"github.com/artpar/api2go/v2"
 	"github.com/pquerna/otp"
 	"github.com/pquerna/otp/totp"
-	"time"
 )
 
 type otpLoginVerifyActionPerformer struct {

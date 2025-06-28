@@ -1,12 +1,16 @@
 package server
 
 import (
+	"net/http"
+	"net/url"
+	"strings"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/auth"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/L3m0nSo/Memories/server/table_info"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/auth"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/daptin/daptin/server/table_info"
 	"github.com/gobuffalo/flect"
 	"github.com/google/uuid"
 	"github.com/graphql-go/graphql"
@@ -14,13 +18,12 @@ import (
 	"github.com/iancoleman/strcase"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
-	"net/http"
-	"net/url"
-	"strings"
+
 	//	"encoding/base64"
 	"errors"
 	//"fmt"
 	"fmt"
+
 	"github.com/artpar/api2go/v2/jsonapi"
 )
 

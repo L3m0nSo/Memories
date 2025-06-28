@@ -5,16 +5,17 @@ package server
 
 import (
 	"context"
-	"github.com/artpar/api2go/v2"
-	"github.com/buraksezer/olric"
-	"github.com/buraksezer/olric/config"
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/jmoiron/sqlx"
-	log "github.com/sirupsen/logrus"
 	"net/http"
 	"net/url"
 	"testing"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/artpar/api2go/v2"
+	"github.com/buraksezer/olric"
+	"github.com/buraksezer/olric/config"
+	"github.com/jmoiron/sqlx"
+	log "github.com/sirupsen/logrus"
 )
 
 func TestStream(t *testing.T) {

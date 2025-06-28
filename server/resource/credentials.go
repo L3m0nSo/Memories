@@ -1,8 +1,8 @@
 package resource
 
 import (
-	"github.com/daptin/daptin/server/dbresourceinterface"
-	daptinid "github.com/daptin/daptin/server/id"
+	"github.com/L3m0nSo/Memories/server/dbresourceinterface"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
 	"github.com/jmoiron/sqlx"
 )
 

@@ -3,14 +3,15 @@ package websockets
 import (
 	"context"
 	"encoding/json"
+	"strings"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/permission"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/buraksezer/olric"
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/permission"
-	"github.com/daptin/daptin/server/resource"
 	"github.com/go-redis/redis/v8"
 	"github.com/google/uuid"
 	log "github.com/sirupsen/logrus"
-	"strings"
 )
 
 // WebSocketConnectionHandlerImpl : Each websocket connection has its own handler

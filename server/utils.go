@@ -1,20 +1,21 @@
 package server
 
 import (
-	"github.com/daptin/daptin/server/actionresponse"
 	"os"
 	"path/filepath"
 	"strings"
 
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/database"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
+	"github.com/L3m0nSo/Memories/server/table_info"
 	"github.com/artpar/api2go/v2"
 	"github.com/artpar/conform"
 	"github.com/artpar/ydb"
 	"github.com/buraksezer/olric"
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/database"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/daptin/daptin/server/statementbuilder"
-	"github.com/daptin/daptin/server/table_info"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/google/uuid"
 	"github.com/jmoiron/sqlx"

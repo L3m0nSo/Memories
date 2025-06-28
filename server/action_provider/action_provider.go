@@ -1,11 +1,11 @@
 package action_provider
 
 import (
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/actions"
+	"github.com/L3m0nSo/Memories/server/hostswitch"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/artpar/go-guerrilla"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/actions"
-	"github.com/daptin/daptin/server/hostswitch"
-	"github.com/daptin/daptin/server/resource"
 	log "github.com/sirupsen/logrus"
 )
 

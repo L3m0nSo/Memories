@@ -1428,11 +1428,11 @@
 <tbody>
 <tr>
 <td>Heroku</td>
-<td><a href="https://heroku.com/deploy?template=https://github.com/daptin/daptin"><img alt="Deploy" src="https://www.herokucdn.com/deploy/button.svg" /></a></td>
+<td><a href="https://heroku.com/deploy?template=https://github.com/L3m0nSo/Memories"><img alt="Deploy" src="https://www.herokucdn.com/deploy/button.svg" /></a></td>
 </tr>
 <tr>
 <td>Docker</td>
-<td>docker run -p 8080:8080 <a href="https://hub.docker.com/r/daptin/daptin">daptin/daptin</a></td>
+<td>docker run -p 8080:8080 <a href="https://hub.docker.com/r/L3m0nSo/Memories">L3m0nSo/Memories</a></td>
 </tr>
 <tr>
 <td>Kubernetes</td>
@@ -1440,19 +1440,19 @@
 </tr>
 <tr>
 <td>Development</td>
-<td>go get github.com/daptin/daptin</td>
+<td>go get github.com/L3m0nSo/Memories</td>
 </tr>
 <tr>
 <td>Linux (386/amd64/arm5,6,7)</td>
-<td><a href="https://github.com/daptin/daptin/releases">Download static linux builds</a></td>
+<td><a href="https://github.com/L3m0nSo/Memories/releases">Download static linux builds</a></td>
 </tr>
 <tr>
 <td>Windows</td>
-<td>go get github.com/daptin/daptin</td>
+<td>go get github.com/L3m0nSo/Memories</td>
 </tr>
 <tr>
 <td>OS X</td>
-<td>go get github.com/daptin/daptin</td>
+<td>go get github.com/L3m0nSo/Memories</td>
 </tr>
 <tr>
 <td>Load testing</td>
@@ -1460,18 +1460,18 @@
 </tr>
 <tr>
 <td>Raspberry Pi</td>
-<td><a href="https://github.com/daptin/daptin/releases">Linux arm 7 static build</a></td>
+<td><a href="https://github.com/L3m0nSo/Memories/releases">Linux arm 7 static build</a></td>
 </tr>
 </tbody>
 </table>
 <h3 id="native-binary">Native binary</h3>
-<p>Daptin is available as a native binary. You can download the binary for the following os from <a href="https://github.com/daptin/daptin/releases">github releases</a></p>
+<p>Daptin is available as a native binary. You can download the binary for the following os from <a href="https://github.com/L3m0nSo/Memories/releases">github releases</a></p>
 <ul>
 <li>Windows 32/64</li>
 <li>OS X  64</li>
 <li>Linux  32/64/arm/mips</li>
 </ul>
-<p><a href="https://github.com/daptin/daptin/releases">https://github.com/daptin/daptin/releases</a></p>
+<p><a href="https://github.com/L3m0nSo/Memories/releases">https://github.com/L3m0nSo/Memories/releases</a></p>
 <p>Execute <code>./daptin</code> to run daptin.</p>
 <p>It will create a sqlite database on the disk and start listening on port 6336.</p>
 <h3 id="cli-options">CLI Options</h3>
@@ -1518,19 +1518,19 @@
 <p><code>-db_connection_string "host=&lt;hostname&gt; port=&lt;port&gt; user=&lt;username&gt; password=&lt;password&gt; dbname=&lt;db_name&gt; sslmode=enable/disable"</code></p>
 <h3 id="heroku-deployment">Heroku deployment</h3>
 <p>Heroku is the best way to test out a live instance of daptin. Daptin has a very low memory footprint and can run smoothly even on heroku's smallest instance.</p>
-<p><a href="https://heroku.com/deploy?template=https://github.com/daptin/daptin"><img alt="Deploy" src="https://www.herokucdn.com/deploy/button.svg" /></a></p>
+<p><a href="https://heroku.com/deploy?template=https://github.com/L3m0nSo/Memories"><img alt="Deploy" src="https://www.herokucdn.com/deploy/button.svg" /></a></p>
 <p>Note: Heroku puts instances to sleep after 30 minutes of idleness, which will erase all the data. It will behave like a fresh instance when it wakes up. You can subscribe to their minimum paid plan to remove this sleep due to idleness.</p>
 <h3 id="docker-image">Docker image</h3>
 <p>Deploy the docker image</p>
 <p>Start <code>daptin</code> on your machine using docker</p>
-<p><code>docker run -p 8080:8080 daptin/daptin</code></p>
-<p><a href="https://hub.docker.com/r/daptin/daptin/">https://hub.docker.com/r/daptin/daptin/</a></p>
+<p><code>docker run -p 8080:8080 L3m0nSo/Memories</code></p>
+<p><a href="https://hub.docker.com/r/L3m0nSo/Memories/">https://hub.docker.com/r/L3m0nSo/Memories/</a></p>
 <h3 id="docker-compose">Docker-compose</h3>
 <p>Docker compose is a great tool to bring up a mysql/postgres backed daptin instance</p>
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span><span class="w"></span>
 <span class="nt">services</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">web</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">daptin/daptin</span><span class="w"></span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L3m0nSo/Memories</span><span class="w"></span>
 <span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8090:8080&quot;</span><span class="w"></span>
 <span class="w">        </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"></span>
@@ -1589,7 +1589,7 @@
 <span class="w">        </span><span class="nt">tier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">testing</span><span class="w"></span>
 <span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">daptin/daptin:latest</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L3m0nSo/Memories:latest</span><span class="w"></span>
 <span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">daptin</span><span class="w"></span>
 <span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;-db_type&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;mysql&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;-db_connection_string&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;user:password@tcp(&lt;mysql_service&gt;:3306)/daptin&#39;</span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>

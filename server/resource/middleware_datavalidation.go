@@ -1,16 +1,19 @@
 package resource
 
 import (
+	"strings"
+
+	"github.com/L3m0nSo/Memories/server/table_info"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/table_info"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
-	"strings"
+
 	//"github.com/go-playground/validator"
 	"fmt"
+
 	"github.com/artpar/conform"
 	"github.com/go-playground/locales/en"
-	"github.com/go-playground/universal-translator"
+	ut "github.com/go-playground/universal-translator"
 	"gopkg.in/go-playground/validator.v9"
 )
 

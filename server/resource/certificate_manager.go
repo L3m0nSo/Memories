@@ -10,18 +10,19 @@ import (
 	"encoding/pem"
 	"errors"
 	"fmt"
-	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/auth"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/subsite"
-	"github.com/jmoiron/sqlx"
-	log "github.com/sirupsen/logrus"
 	"math/big"
 	"net"
 	"net/http"
 	"net/url"
 	"strings"
 	"time"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/subsite"
+	"github.com/artpar/api2go/v2"
+	"github.com/jmoiron/sqlx"
+	log "github.com/sirupsen/logrus"
 )
 
 type CertificateManager struct {

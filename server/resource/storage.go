@@ -2,8 +2,9 @@ package resource
 
 import (
 	"database/sql"
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/statementbuilder"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/google/uuid"
 	"github.com/jmoiron/sqlx"

@@ -1,12 +1,13 @@
 package server
 
 import (
-	"github.com/daptin/daptin/server/cache"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/gin-gonic/gin"
 	"io"
 	"net/http"
 	"time"
+
+	"github.com/L3m0nSo/Memories/server/cache"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/gin-gonic/gin"
 )
 
 func CreateFaviconEndpoint(boxRoot http.FileSystem) gin.HandlerFunc {

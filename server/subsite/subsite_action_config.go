@@ -2,7 +2,8 @@ package subsite
 
 import (
 	"encoding/json"
-	"github.com/daptin/daptin/server/actionresponse"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
 )
 
 func GetActionConfig(actionRequestInt interface{}) (actionresponse.ActionRequest, error) {

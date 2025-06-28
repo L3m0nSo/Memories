@@ -2,14 +2,15 @@ package resource
 
 import (
 	"fmt"
+	"strings"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/database"
+	"github.com/L3m0nSo/Memories/server/table_info"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/database"
-	"github.com/daptin/daptin/server/table_info"
 	"github.com/jinzhu/copier"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
-	"strings"
 )
 
 func CreateUniqueConstraints(initConfig *CmsConfig, db *sqlx.Tx) {

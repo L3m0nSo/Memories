@@ -1,11 +1,12 @@
 package server
 
 import (
-	"github.com/daptin/daptin/server/auth"
+	"net/http"
+
+	"github.com/L3m0nSo/Memories/server/auth"
 	"github.com/emersion/go-webdav"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
-	"net/http"
 )
 
 func InitializeCaldavResources(authMiddleware *auth.AuthMiddleware, defaultRouter *gin.Engine) {

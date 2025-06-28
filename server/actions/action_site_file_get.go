@@ -3,10 +3,11 @@ package actions
 import (
 	"encoding/base64"
 	"errors"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
 	"io"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
 
 	"github.com/artpar/api2go/v2"
 	"github.com/jmoiron/sqlx"

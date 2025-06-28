@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/daptin/daptin/server/table_info"
+	"github.com/L3m0nSo/Memories/server/table_info"
 	"github.com/sirupsen/logrus"
 )
 

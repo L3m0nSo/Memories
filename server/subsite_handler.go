@@ -1,16 +1,17 @@
 package server
 
 import (
-	"github.com/daptin/daptin/server/assetcachepojo"
-	"github.com/daptin/daptin/server/cache"
-	"github.com/daptin/daptin/server/subsite"
-	"github.com/gin-gonic/gin"
 	"io"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
 	"time"
+
+	"github.com/L3m0nSo/Memories/server/assetcachepojo"
+	"github.com/L3m0nSo/Memories/server/cache"
+	"github.com/L3m0nSo/Memories/server/subsite"
+	"github.com/gin-gonic/gin"
 )
 
 func SubsiteRequestHandler(site subsite.SubSite, assetCache *assetcachepojo.AssetFolderCache) func(c *gin.Context) {

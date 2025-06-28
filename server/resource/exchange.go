@@ -1,10 +1,11 @@
 package resource
 
 import (
-	"github.com/daptin/daptin/server/auth"
+	"github.com/L3m0nSo/Memories/server/auth"
 	"github.com/jmoiron/sqlx"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
+
 	//"bytes"
 	"bytes"
 )

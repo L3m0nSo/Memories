@@ -1,9 +1,9 @@
 package actionresponse
 
 import (
+	"github.com/L3m0nSo/Memories/server/columns"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/columns"
-	"github.com/daptin/daptin/server/id"
 	"github.com/jmoiron/sqlx"
 )
 

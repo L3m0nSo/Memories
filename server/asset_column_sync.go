@@ -1,15 +1,16 @@
 package server
 
 import (
-	"github.com/daptin/daptin/server/assetcachepojo"
-	"github.com/daptin/daptin/server/cloud_store"
-	"github.com/daptin/daptin/server/dbresourceinterface"
-	"github.com/daptin/daptin/server/rootpojo"
-	"github.com/daptin/daptin/server/task"
-	"github.com/jmoiron/sqlx"
-	log "github.com/sirupsen/logrus"
 	"io/ioutil"
 	"os"
+
+	"github.com/L3m0nSo/Memories/server/assetcachepojo"
+	"github.com/L3m0nSo/Memories/server/cloud_store"
+	"github.com/L3m0nSo/Memories/server/dbresourceinterface"
+	"github.com/L3m0nSo/Memories/server/rootpojo"
+	"github.com/L3m0nSo/Memories/server/task"
+	"github.com/jmoiron/sqlx"
+	log "github.com/sirupsen/logrus"
 )
 
 func CreateAssetColumnSync(cruds map[string]dbresourceinterface.DbResourceInterface, transaction *sqlx.Tx) map[string]map[string]*assetcachepojo.AssetFolderCache {

@@ -3,22 +3,23 @@ package resource
 import (
 	"context"
 	"fmt"
-	"github.com/buraksezer/olric"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/google/uuid"
-	"github.com/jmoiron/sqlx"
 	"strconv"
 	"strings"
 	"time"
 
-	"github.com/daptin/daptin/server/auth"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/buraksezer/olric"
+	"github.com/google/uuid"
+	"github.com/jmoiron/sqlx"
+
+	"github.com/L3m0nSo/Memories/server/auth"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/doug-martin/goqu/v9/exp"
 
 	"encoding/base64"
 
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/statementbuilder"
 	log "github.com/sirupsen/logrus"
 )
 

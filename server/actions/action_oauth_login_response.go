@@ -3,10 +3,13 @@ package actions
 import (
 	"context"
 	"fmt"
+	"strings"
+	"time"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/jmoiron/sqlx"
 	"github.com/pkg/errors"
@@ -14,8 +17,6 @@ import (
 	"github.com/pquerna/otp/totp"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
-	"strings"
-	"time"
 )
 
 type oauthLoginResponseActionPerformer struct {

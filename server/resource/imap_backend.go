@@ -2,10 +2,11 @@ package resource
 
 import (
 	"errors"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
 	"github.com/artpar/go-imap"
 	"github.com/artpar/go-imap/backend"
-	"github.com/daptin/daptin/server/auth"
-	daptinid "github.com/daptin/daptin/server/id"
 )
 
 type DaptinImapBackend struct {

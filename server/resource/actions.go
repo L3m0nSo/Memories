@@ -3,7 +3,8 @@ package resource
 import (
 	"bytes"
 	"encoding/binary"
-	daptinid "github.com/daptin/daptin/server/id"
+
+	daptinid "github.com/L3m0nSo/Memories/server/id"
 	"github.com/google/uuid"
 )
 

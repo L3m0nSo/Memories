@@ -4,20 +4,21 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"strings"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/artpar/api2go/v2"
 	"github.com/artpar/rclone/cmd"
 	"github.com/artpar/rclone/fs"
 	"github.com/artpar/rclone/fs/config"
 	"github.com/artpar/rclone/fs/operations"
 	"github.com/artpar/rclone/fs/sync"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
 	hugoCommand "github.com/gohugoio/hugo/commands"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	"strings"
 )
 
 type syncSiteStorageActionPerformer struct {

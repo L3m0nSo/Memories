@@ -1,11 +1,12 @@
 package fakerservice
 
 import (
-	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/daptin/daptin/server/table_info"
-	log "github.com/sirupsen/logrus"
 	"testing"
+
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/L3m0nSo/Memories/server/table_info"
+	"github.com/artpar/api2go/v2"
+	log "github.com/sirupsen/logrus"
 )
 
 func TestNewFakeInstance(t *testing.T) {

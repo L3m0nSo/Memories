@@ -2,8 +2,9 @@ package server
 
 import (
 	"fmt"
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/resource"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/gin-gonic/gin"
 	log "github.com/sirupsen/logrus"
 )

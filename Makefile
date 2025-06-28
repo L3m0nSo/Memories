@@ -46,13 +46,13 @@ endif
 #Binary was compiled with 'CGO_ENABLED=0', go-sqlite3 requires cgo to work. This is a stub
 daptin:
 	go get
-	CGO_ENABLED=1 go build -v --ldflags "-s $(govvv -flags) -X github.com/daptin/daptin.Version=$(TAG)" $(BUILDTAGS)
+	CGO_ENABLED=1 go build -v --ldflags "-s $(govvv -flags) -X github.com/L3m0nSo/Memories.Version=$(TAG)" $(BUILDTAGS)
 	mkdir -p `go env GOPATH`/bin/
 	cp -av daptin`go env GOEXE` `go env GOPATH`/bin/daptin`go env GOEXE`.new
 	mv -v `go env GOPATH`/bin/daptin`go env GOEXE`.new `go env GOPATH`/bin/daptin`go env GOEXE`
 
 test_all:
-	go install --ldflags "-s -X github.com/daptin/daptin.Version=$(TAG)" $(BUILDTAGS) github.com/daptin/daptin/fstest/test_all
+	go install --ldflags "-s -X github.com/L3m0nSo/Memories.Version=$(TAG)" $(BUILDTAGS) github.com/L3m0nSo/Memories/fstest/test_all
 
 vars:
 	@echo SHELL="'$(SHELL)'"

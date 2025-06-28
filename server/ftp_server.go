@@ -5,7 +5,6 @@ import (
 	"crypto/tls"
 	"errors"
 	"fmt"
-	"github.com/emersion/go-webdav"
 	"io"
 	"io/fs"
 	"net/http"
@@ -13,9 +12,11 @@ import (
 	"strings"
 	"time"
 
+	"github.com/emersion/go-webdav"
+
 	log "github.com/sirupsen/logrus"
 
-	"github.com/daptin/daptin/server/resource"
+	"github.com/L3m0nSo/Memories/server/resource"
 
 	"sync/atomic"
 

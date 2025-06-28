@@ -2,16 +2,19 @@ package actions
 
 import (
 	"fmt"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/resource"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
+
 	//"golang.org/x/oauth2"
+	"time"
+
 	"github.com/artpar/api2go/v2"
 	"github.com/pquerna/otp"
 	"github.com/pquerna/otp/totp"
 	"golang.org/x/oauth2"
-	"time"
 )
 
 type oauthLoginBeginActionPerformer struct {

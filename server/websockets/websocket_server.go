@@ -1,8 +1,8 @@
 package websockets
 
 import (
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/buraksezer/olric"
-	"github.com/daptin/daptin/server/resource"
 	"github.com/gin-gonic/gin"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/websocket"

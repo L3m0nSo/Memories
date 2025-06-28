@@ -3,11 +3,12 @@ package resource
 import (
 	"crypto/md5"
 	"encoding/base64"
-	"github.com/daptin/daptin/server/actionresponse"
-	daptinid "github.com/daptin/daptin/server/id"
 	"net/http"
 	"net/url"
 	"strconv"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
 
 	"github.com/artpar/api2go/v2"
 	"github.com/doug-martin/goqu/v9"
@@ -20,9 +21,9 @@ import (
 	//"strconv"
 	"fmt"
 
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
 	"github.com/araddon/dateparse"
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/statementbuilder"
 	"github.com/pkg/errors"
 
 	//"strconv"

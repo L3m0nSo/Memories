@@ -8,9 +8,9 @@ name: build
 on:
   push:
     branches:
-      - '*'
+      - "*"
     tags:
-      - '*'
+      - "*"
   pull_request:
 
 jobs:
@@ -19,13 +19,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        job_name: ['linux', 'mac', 'windows_amd64', 'other_os', 'modules_race']
+        job_name: ["linux", "mac", "windows_amd64", "other_os", "modules_race"]
 
         include:
           - job_name: linux
             os: ubuntu-latest
-            go: '1.21.x'
-            modules: 'on'
+            go: "1.21.x"
+            modules: "on"
             gotags: cmount
             build_flags: '-include "^linux/"'
             check: true
@@ -34,33 +34,33 @@ jobs:
 
           - job_name: mac
             os: macOS-latest
-            go: '1.21.x'
-            modules: 'on'
-            gotags: ''  # cmount doesn't work on osx travis for some reason
+            go: "1.21.x"
+            modules: "on"
+            gotags: "" # cmount doesn't work on osx travis for some reason
             build_flags: '-include "^darwin/" -cgo'
             quicktest: true
             deploy: true
 
           - job_name: windows_amd64
             os: windows-latest
-            go: '1.21.x'
-            modules: 'on'
+            go: "1.21.x"
+            modules: "on"
             gotags: cmount
             build_flags: '-include "^windows/amd64" -cgo'
             deploy: true
 
           - job_name: other_os
             os: ubuntu-latest
-            go: '1.21.x'
-            modules: 'on'
+            go: "1.21.x"
+            modules: "on"
             build_flags: "-exclude '^(windows/|darwin/amd64|linux/)'"
             compile_all: true
             deploy: true
 
           - job_name: modules_race
             os: ubuntu-latest
-            go: '1.21.x'
-            modules: 'on'
+            go: "1.21.x"
+            modules: "on"
             quicktest: true
 
     name: ${{ matrix.job_name }}
@@ -82,13 +82,13 @@ jobs:
       - name: Set environment variables
         shell: bash
         run: |
-          
+
           echo "GOPATH=${{ runner.workspace }}" >> $GITHUB_ENV
           echo "GO111MODULE=${{ matrix.modules }}" >> $GITHUB_ENV
           echo "GOTAGS=${{ matrix.gotags }}" >> $GITHUB_ENV
           echo "BUILD_FLAGS=${{ matrix.build_flags }}" >> $GITHUB_ENV
           echo "${{ runner.workspace }}/bin" >> $GITHUB_PATH
-          
+
           if [[ "${{ matrix.goarch }}" != "" ]]; then echo "GOARCH=${{ matrix.goarch }}" >> $GITHUB_ENV ; fi
           if [[ "${{ matrix.cgo }}" != "" ]]; then echo "CGO_ENABLED=${{ matrix.cgo }}" >> $GITHUB_ENV  ; fi
       - name: Install Libraries on Linux
@@ -99,7 +99,6 @@ jobs:
           sudo chown root:$USER /etc/fuse.conf
           sudo apt-get install fuse libfuse-dev rpm pkg-config rclone
         if: matrix.os == 'ubuntu-latest'
-
 
       - name: Install Libraries on Windows
         shell: powershell
@@ -133,8 +132,6 @@ jobs:
           make racequicktest
         if: matrix.racequicktest
 
-
-
       - name: Build dashboard
         shell: bash
         run: |
@@ -145,8 +142,6 @@ jobs:
           go install github.com/GeertJohan/go.rice/rice@latest
           $GOPATH/bin/rice embed-go
 
-
-
       - name: Installl gorice on linux
         shell: bash
         run: |
@@ -156,7 +151,6 @@ jobs:
           go install github.com/goreleaser/nfpm/cmd/nfpm@latest
           go get
           ls -lah
-
 
       - name: Compile all architectures test
         shell: bash
@@ -170,8 +164,7 @@ jobs:
         run: |
           make travis_beta
           ls -lah build/
-        if: matrix.deploy && github.head_ref == '' && github.repository == 'daptin/daptin'
-
+        if: matrix.deploy && github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         name: Upload freebsd amd64 artifact
@@ -179,7 +172,7 @@ jobs:
         with:
           name: daptin-beta-latest-freebsd-amd64.zip
           path: build/daptin-beta-latest-freebsd-amd64.zip
-        if: matrix.deploy && github.head_ref == '' && github.repository == 'daptin/daptin'
+        if: matrix.deploy && github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         name: Upload linux arm64 artifact
@@ -187,7 +180,7 @@ jobs:
         with:
           name: daptin-beta-latest-linux-arm64.zip
           path: build/daptin-beta-latest-linux-arm64.zip
-        if: matrix.deploy && github.head_ref == '' && github.repository == 'daptin/daptin'
+        if: matrix.deploy && github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         name: Upload linux amd64 artifact
@@ -195,7 +188,7 @@ jobs:
         with:
           name: daptin-beta-latest-linux-amd64.zip
           path: build/daptin-beta-latest-linux-amd64.zip
-        if: matrix.deploy && github.head_ref == '' && github.repository == 'daptin/daptin'
+        if: matrix.deploy && github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         name: Upload freebsd arm artifact
@@ -203,7 +196,7 @@ jobs:
         with:
           name: daptin-beta-latest-freebsd-arm.zip
           path: build/daptin-beta-latest-freebsd-arm.zip
-        if: matrix.deploy && github.head_ref == '' && github.repository == 'daptin/daptin'
+        if: matrix.deploy && github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         continue-on-error: true
@@ -211,7 +204,7 @@ jobs:
         with:
           name: daptin-beta-latest-windows-amd64.zip
           path: build/daptin-beta-latest-windows-amd64.zip
-        if: matrix.deploy && github.head_ref == '' && github.repository == 'daptin/daptin'
+        if: matrix.deploy && github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         continue-on-error: true
@@ -219,7 +212,7 @@ jobs:
         with:
           name: daptin-beta-latest-netbsd-amd64.zip
           path: build/daptin-beta-latest-netbsd-amd64.zip
-        if: matrix.deploy && github.head_ref == '' && github.repository == 'daptin/daptin'
+        if: matrix.deploy && github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         continue-on-error: true
@@ -227,7 +220,7 @@ jobs:
         with:
           name: daptin-beta-latest-netbsd-arm.zip
           path: build/daptin-beta-latest-netbsd-arm.zip
-        if: matrix.deploy && github.head_ref == '' && github.repository == 'daptin/daptin'
+        if: matrix.deploy && github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         continue-on-error: true
@@ -235,7 +228,7 @@ jobs:
         with:
           name: daptin-beta-latest-openbsd-amd64.zip
           path: build/daptin-beta-latest-openbsd-amd64.zip
-        if: matrix.deploy && github.head_ref == '' && github.repository == 'daptin/daptin'
+        if: matrix.deploy && github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         continue-on-error: true
@@ -243,7 +236,7 @@ jobs:
         with:
           name: daptin-beta-latest-osx-amd64.zip
           path: build/daptin-beta-latest-osx-amd64.zip
-        if: matrix.deploy && github.head_ref == '' && github.repository == 'daptin/daptin'
+        if: matrix.deploy && github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         continue-on-error: true
@@ -251,8 +244,7 @@ jobs:
         with:
           name: daptin-beta-latest-solaris-amd64.zip
           path: build/daptin-beta-latest-solaris-amd64.zip
-        if: matrix.deploy && github.head_ref == '' && github.repository == 'daptin/daptin'
-
+        if: matrix.deploy && github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
   xgo:
     timeout-minutes: 90
@@ -260,7 +252,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v1
 
@@ -269,13 +260,10 @@ jobs:
         with:
           go-version: 1.21
 
-
-
       - name: Print env variable
         shell: bash
         id: tagInfo
         run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
-
 
       - name: Set environment variables
         shell: bash
@@ -283,11 +271,9 @@ jobs:
           echo "GOPATH=${{ runner.workspace }}" >> $GITHUB_ENV
           echo "${{ runner.workspace }}/bin" >> $GITHUB_PATH
 
-
       - name: Copy Code
         shell: bash
-        run: go get github.com/daptin/daptin
-
+        run: go get github.com/L3m0nSo/Memories
 
       - name: Build dashboard
         shell: bash
@@ -299,25 +285,23 @@ jobs:
           go install github.com/GeertJohan/go.rice/rice@latest
           $GOPATH/bin/rice embed-go
 
-
-
-#      - name: Installl gorice on linux
-#        shell: bash
-#        run: |
-#          ls -lah
-#          go install github.com/GeertJohan/go.rice/rice@latest
-#          $GOPATH/bin/rice append --exec ./build/github.com/daptin/daptin-linux-amd64
-#          $GOPATH/bin/rice append --exec ./build/github.com/daptin/daptin-darwin-amd64
-#          $GOPATH/bin/rice append --exec ./build/github.com/daptin/daptin-linux-arm-5
-#          $GOPATH/bin/rice append --exec ./build/github.com/daptin/daptin-linux-arm-6
-#          $GOPATH/bin/rice append --exec ./build/github.com/daptin/daptin-linux-arm-7
-#          $GOPATH/bin/rice append --exec ./build/github.com/daptin/daptin-linux-mips
-#          $GOPATH/bin/rice append --exec ./build/github.com/daptin/daptin-linux-mipsle
-#          $GOPATH/bin/rice append --exec ./build/github.com/daptin/daptin-linux-mips64
-#          $GOPATH/bin/rice append --exec ./build/github.com/daptin/daptin-linux-mips64le
-#          $GOPATH/bin/rice append --exec ./build/github.com/daptin/daptin-windows-amd64.exe
-#          $GOPATH/bin/rice append --exec ./build/github.com/daptin/daptin-windows-4.0-386.exe
-#
+      #      - name: Installl gorice on linux
+      #        shell: bash
+      #        run: |
+      #          ls -lah
+      #          go install github.com/GeertJohan/go.rice/rice@latest
+      #          $GOPATH/bin/rice append --exec ./build/github.com/L3m0nSo/Memories-linux-amd64
+      #          $GOPATH/bin/rice append --exec ./build/github.com/L3m0nSo/Memories-darwin-amd64
+      #          $GOPATH/bin/rice append --exec ./build/github.com/L3m0nSo/Memories-linux-arm-5
+      #          $GOPATH/bin/rice append --exec ./build/github.com/L3m0nSo/Memories-linux-arm-6
+      #          $GOPATH/bin/rice append --exec ./build/github.com/L3m0nSo/Memories-linux-arm-7
+      #          $GOPATH/bin/rice append --exec ./build/github.com/L3m0nSo/Memories-linux-mips
+      #          $GOPATH/bin/rice append --exec ./build/github.com/L3m0nSo/Memories-linux-mipsle
+      #          $GOPATH/bin/rice append --exec ./build/github.com/L3m0nSo/Memories-linux-mips64
+      #          $GOPATH/bin/rice append --exec ./build/github.com/L3m0nSo/Memories-linux-mips64le
+      #          $GOPATH/bin/rice append --exec ./build/github.com/L3m0nSo/Memories-windows-amd64.exe
+      #          $GOPATH/bin/rice append --exec ./build/github.com/L3m0nSo/Memories-windows-4.0-386.exe
+      #
 
       - name: Set environment variables
         shell: bash
@@ -331,7 +315,6 @@ jobs:
 
           if [[ "${{ matrix.goarch }}" != "" ]]; then echo "GOARCH=${{ matrix.goarch }}" >> $GITHUB_ENV ; fi
           if [[ "${{ matrix.cgo }}" != "" ]]; then echo "CGO_ENABLED=${{ matrix.cgo }}" >> $GITHUB_ENV  ; fi
-
 
       - name: Cross-compile daptin
         run: |
@@ -350,7 +333,6 @@ jobs:
           $GOPATH/bin/xgo -targets='darwin/amd64,darwin/arm64,windows/*' \
               --tags netgo -ldflags '-linkmode external' -dest build .
 
-
       - name: List built artifacts
         shell: bash
         run: |
@@ -358,70 +340,68 @@ jobs:
           find build
           file build/github.com/*
           echo ${{ github.ref_name }}
-          cp ./build/github.com/daptin/daptin-linux-amd64 daptin-linux-amd64
-          docker build -t daptin/daptin:${{ github.ref_name }} .
+          cp ./build/github.com/L3m0nSo/Memories-linux-amd64 daptin-linux-amd64
+          docker build -t L3m0nSo/Memories:${{ github.ref_name }} .
           docker login -u="${{ secrets.DOCKER_USERNAME }}" -p="${{ secrets.DOCKER_PASSWORD }}"
-          docker push daptin/daptin:${{ github.ref_name }}
-          docker tag daptin/daptin:${{ github.ref_name }} daptin/daptin:${{ github.ref_name }}
-          docker push daptin/daptin:${{ github.ref_name }}
+          docker push L3m0nSo/Memories:${{ github.ref_name }}
+          docker tag L3m0nSo/Memories:${{ github.ref_name }} L3m0nSo/Memories:${{ github.ref_name }}
+          docker push L3m0nSo/Memories:${{ github.ref_name }}
 
       - uses: actions/upload-artifact@v4
         name: Upload linux amd64 artifact
         with:
           name: daptin-linux-amd64
-          path: build/github.com/daptin/daptin-linux-amd64
-        if: github.head_ref == '' && github.repository == 'daptin/daptin'
+          path: build/github.com/L3m0nSo/Memories-linux-amd64
+        if: github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         name: Upload darwin arm64 artifact
         with:
           name: daptin-darwin-arm64
-          path: build/github.com/daptin/daptin-darwin-arm64
-        if: github.head_ref == '' && github.repository == 'daptin/daptin'
-
+          path: build/github.com/L3m0nSo/Memories-darwin-arm64
+        if: github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         name: Upload darwin amd64 artifact
         with:
           name: daptin-darwin-amd64
-          path: build/github.com/daptin/daptin-darwin-amd64
-        if: github.head_ref == '' && github.repository == 'daptin/daptin'
+          path: build/github.com/L3m0nSo/Memories-darwin-amd64
+        if: github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         name: Upload linux arm64 artifact
         with:
           name: daptin-linux-arm64
-          path: build/github.com/daptin/daptin-linux-arm64
-        if: github.head_ref == '' && github.repository == 'daptin/daptin'
+          path: build/github.com/L3m0nSo/Memories-linux-arm64
+        if: github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
-#      - uses: actions/upload-artifact@v4
-#        name: Upload arm-5 artifact
-#        with:
-#          name: daptin-linux-arm-5
-#          path: build/github.com/daptin/daptin-linux-arm-5
-#        if: github.head_ref == '' && github.repository == 'daptin/daptin'
-#
-#      - uses: actions/upload-artifact@v4
-#        name: Upload arm-6 artifact
-#        with:
-#          name: daptin-linux-arm-6
-#          path: build/github.com/daptin/daptin-linux-arm-6
-#        if: github.head_ref == '' && github.repository == 'daptin/daptin'
-#
-#      - uses: actions/upload-artifact@v4
-#        name: Upload arm-7 artifact
-#        with:
-#          name: daptin-linux-arm-7
-#          path: build/github.com/daptin/daptin-linux-arm-7
-#        if: github.head_ref == '' && github.repository == 'daptin/daptin'
-
+      #      - uses: actions/upload-artifact@v4
+      #        name: Upload arm-5 artifact
+      #        with:
+      #          name: daptin-linux-arm-5
+      #          path: build/github.com/L3m0nSo/Memories-linux-arm-5
+      #        if: github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
+      #
+      #      - uses: actions/upload-artifact@v4
+      #        name: Upload arm-6 artifact
+      #        with:
+      #          name: daptin-linux-arm-6
+      #          path: build/github.com/L3m0nSo/Memories-linux-arm-6
+      #        if: github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
+      #
+      #      - uses: actions/upload-artifact@v4
+      #        name: Upload arm-7 artifact
+      #        with:
+      #          name: daptin-linux-arm-7
+      #          path: build/github.com/L3m0nSo/Memories-linux-arm-7
+      #        if: github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - uses: actions/upload-artifact@v4
         name: Upload windows amd64 artifact
         with:
           name: daptin-windows-amd64.exe
-          path: build/github.com/daptin/daptin-windows-amd64.exe
-        if: github.head_ref == '' && github.repository == 'daptin/daptin'
+          path: build/github.com/L3m0nSo/Memories-windows-amd64.exe
+        if: github.head_ref == '' && github.repository == 'L3m0nSo/Memories'
 
       - name: Release
         uses: softprops/action-gh-release@v1
@@ -429,10 +409,10 @@ jobs:
         with:
           draft: true
           files: |
-            ./build/github.com/daptin/daptin-linux-amd64
-            ./build/github.com/daptin/daptin-darwin-amd64
-            ./build/github.com/daptin/daptin-linux-arm64
-            ./build/github.com/daptin/daptin-windows-amd64.exe
+            ./build/github.com/L3m0nSo/Memories-linux-amd64
+            ./build/github.com/L3m0nSo/Memories-darwin-amd64
+            ./build/github.com/L3m0nSo/Memories-linux-arm64
+            ./build/github.com/L3m0nSo/Memories-windows-amd64.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -441,11 +421,10 @@ jobs:
         run: |
           echo ${{ github.ref_name }}
           pwd
-          cp ./build/github.com/daptin/daptin-linux-amd64 daptin-linux-amd64
+          cp ./build/github.com/L3m0nSo/Memories-linux-amd64 daptin-linux-amd64
           ls -lah
-          docker build -t daptin/daptin:${{ github.ref_name }} .
+          docker build -t L3m0nSo/Memories:${{ github.ref_name }} .
           docker login -u="${{ secrets.DOCKER_USERNAME }}" -p="${{ secrets.DOCKER_PASSWORD }}"
-          docker push daptin/daptin:${{ github.ref_name }}
-          docker tag daptin/daptin:${{ github.ref_name }} daptin/daptin:${{ github.ref_name }}
-          docker push daptin/daptin:${{ github.ref_name }}
-          
+          docker push L3m0nSo/Memories:${{ github.ref_name }}
+          docker tag L3m0nSo/Memories:${{ github.ref_name }} L3m0nSo/Memories:${{ github.ref_name }}
+          docker push L3m0nSo/Memories:${{ github.ref_name }}

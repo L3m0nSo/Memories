@@ -1,14 +1,15 @@
 package hostswitch
 
 import (
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/constants"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/subsite"
-	"github.com/gin-gonic/gin"
-	log "github.com/sirupsen/logrus"
 	"net/http"
 	"strings"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/constants"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/subsite"
+	"github.com/gin-gonic/gin"
+	log "github.com/sirupsen/logrus"
 )
 
 type HostSwitch struct {

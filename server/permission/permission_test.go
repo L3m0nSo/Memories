@@ -2,10 +2,11 @@ package permission
 
 import (
 	"fmt"
-	"github.com/daptin/daptin/server/auth"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/google/uuid"
 	"testing"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/google/uuid"
 )
 
 func TestPermissionValues(t *testing.T) {

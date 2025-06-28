@@ -2,14 +2,15 @@ package resource
 
 import (
 	"encoding/base64"
-	"github.com/daptin/daptin/server/actionresponse"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/jmoiron/sqlx"
 	"strings"
 
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/jmoiron/sqlx"
+
+	fieldtypes "github.com/L3m0nSo/Memories/server/columntypes"
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
 	"github.com/artpar/api2go/v2"
-	fieldtypes "github.com/daptin/daptin/server/columntypes"
-	"github.com/daptin/daptin/server/statementbuilder"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/google/uuid"
 	log "github.com/sirupsen/logrus"
@@ -20,7 +21,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/daptin/daptin/server/auth"
+	"github.com/L3m0nSo/Memories/server/auth"
 )
 
 // Update an object

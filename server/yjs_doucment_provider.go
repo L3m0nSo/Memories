@@ -2,14 +2,15 @@ package server
 
 import (
 	"encoding/base64"
+	"os"
+	"strings"
+
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/artpar/ydb"
-	"github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
 	"github.com/google/uuid"
 	"github.com/jmoiron/sqlx"
 	"github.com/sirupsen/logrus"
-	"os"
-	"strings"
 )
 
 // PathExistsAndIsFolder checks if a path exists and is a folder

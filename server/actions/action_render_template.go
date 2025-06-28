@@ -2,18 +2,19 @@ package actions
 
 import (
 	"errors"
-	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/assetcachepojo"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/flysnow-org/soha"
-	"github.com/jmoiron/sqlx"
-	log "github.com/sirupsen/logrus"
 	"html/template"
 	"io/ioutil"
 	"os"
 	"strings"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/assetcachepojo"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/artpar/api2go/v2"
+	"github.com/flysnow-org/soha"
+	"github.com/jmoiron/sqlx"
+	log "github.com/sirupsen/logrus"
 )
 
 type renderTemplateActionPerformer struct {

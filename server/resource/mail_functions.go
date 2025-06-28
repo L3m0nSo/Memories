@@ -3,13 +3,14 @@ package resource
 import (
 	"context"
 	"errors"
-	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/statementbuilder"
-	"github.com/doug-martin/goqu/v9"
-	"github.com/jmoiron/sqlx"
 	"net/http"
 	"time"
+
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
+	"github.com/artpar/api2go/v2"
+	"github.com/doug-martin/goqu/v9"
+	"github.com/jmoiron/sqlx"
 )
 
 // Returns the user account row of a user by looking up on email

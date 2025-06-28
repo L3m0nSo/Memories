@@ -1,8 +1,8 @@
 package server
 
 import (
-	"github.com/daptin/daptin/server/database"
-	"github.com/daptin/daptin/server/resource"
+	"github.com/L3m0nSo/Memories/server/database"
+	"github.com/L3m0nSo/Memories/server/resource"
 )
 
 func InitialiseServerResources(initConfig *resource.CmsConfig, db database.DatabaseConnection) {

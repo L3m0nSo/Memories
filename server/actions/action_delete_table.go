@@ -3,17 +3,18 @@ package actions
 import (
 	"context"
 	"fmt"
+	"net/http"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/L3m0nSo/Memories/server/table_info"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/daptin/daptin/server/table_info"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/google/uuid"
 	"github.com/jmoiron/sqlx"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	"net/http"
 )
 
 type deleteWorldPerformer struct {

@@ -2,14 +2,15 @@ package server
 
 import (
 	"fmt"
+	"net/http"
+	"strings"
+
+	fieldtypes "github.com/L3m0nSo/Memories/server/columntypes"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/columntypes"
-	"github.com/daptin/daptin/server/resource"
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/feeds"
 	"github.com/jmoiron/sqlx"
-	"net/http"
-	"strings"
 )
 
 func CreateFeedHandler(cruds map[string]*resource.DbResource, streams []*resource.StreamProcessor, transaction *sqlx.Tx) func(*gin.Context) {

@@ -2,14 +2,15 @@ package server
 
 import (
 	"fmt"
-	"github.com/artpar/go-guerrilla"
-	"github.com/artpar/go-guerrilla/backends"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/jmoiron/sqlx"
-	log "github.com/sirupsen/logrus"
 	"os"
 	"path/filepath"
 	"strconv"
+
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/artpar/go-guerrilla"
+	"github.com/artpar/go-guerrilla/backends"
+	"github.com/jmoiron/sqlx"
+	log "github.com/sirupsen/logrus"
 )
 
 func StartSMTPMailServer(resource *resource.DbResource, certificateManager *resource.CertificateManager, primaryHostname string, transaction *sqlx.Tx) (*guerrilla.Daemon, error) {

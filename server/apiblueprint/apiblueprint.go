@@ -2,14 +2,16 @@ package apiblueprint
 
 import (
 	"bytes"
+
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/L3m0nSo/Memories/server/table_info"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/daptin/daptin/server/table_info"
 	"github.com/iancoleman/strcase"
 
 	"fmt"
 	"strings"
-	//"github.com/daptin/daptin/server/fakerservice"
+
+	//"github.com/L3m0nSo/Memories/server/fakerservice"
 	"github.com/advance512/yaml"
 	log "github.com/sirupsen/logrus"
 )

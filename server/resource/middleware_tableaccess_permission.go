@@ -2,16 +2,17 @@ package resource
 
 import (
 	"fmt"
+	"strings"
+
 	"github.com/artpar/api2go/v2"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
-	"strings"
 
 	//log "github.com/sirupsen/logrus"
 	//"github.com/Masterminds/squirrel"
 	"errors"
 
-	"github.com/daptin/daptin/server/auth"
+	"github.com/L3m0nSo/Memories/server/auth"
 )
 
 // The TableAccessPermissionChecker middleware is resposible for entity level authorization check, before and after the changes

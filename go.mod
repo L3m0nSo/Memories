@@ -1,4 +1,4 @@
-module github.com/daptin/daptin
+module github.com/L3m0nSo/Memories
 
 go 1.24.3
 
@@ -443,4 +443,4 @@ require (
 
 //replace github.com/Azure/go-autorest => github.com/Azure/go-autorest v13.0.0+incompatible
 
-//replace github.com/daptin/daptin v0.9.6 => github.com/Ghvstcode/daptin v0.9.6
+//replace github.com/L3m0nSo/Memories v0.9.6 => github.com/Ghvstcode/daptin v0.9.6

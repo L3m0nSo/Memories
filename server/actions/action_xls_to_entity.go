@@ -3,18 +3,19 @@ package actions
 import (
 	"encoding/base64"
 	"fmt"
+	"os"
+	"strings"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	fieldtypes "github.com/L3m0nSo/Memories/server/columntypes"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/L3m0nSo/Memories/server/rootpojo"
+	"github.com/L3m0nSo/Memories/server/table_info"
 	"github.com/artpar/api2go/v2"
 	"github.com/artpar/xlsx/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/columntypes"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/daptin/daptin/server/rootpojo"
-	"github.com/daptin/daptin/server/table_info"
 	"github.com/jmoiron/sqlx"
 	"github.com/sadlil/go-trigger"
 	log "github.com/sirupsen/logrus"
-	"os"
-	"strings"
 )
 
 type uploadXlsFileToEntityPerformer struct {

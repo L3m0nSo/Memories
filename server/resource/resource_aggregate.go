@@ -2,17 +2,18 @@ package resource
 
 import (
 	"fmt"
-	"github.com/artpar/api2go/v2"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/doug-martin/goqu/v9/exp"
-	"github.com/google/uuid"
-	"github.com/jmoiron/sqlx"
-	log "github.com/sirupsen/logrus"
 	"regexp"
 	"strconv"
 	"strings"
 
-	"github.com/daptin/daptin/server/statementbuilder"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/artpar/api2go/v2"
+	"github.com/doug-martin/goqu/v9/exp"
+	"github.com/google/uuid"
+	"github.com/jmoiron/sqlx"
+	log "github.com/sirupsen/logrus"
+
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/pkg/errors"
 )

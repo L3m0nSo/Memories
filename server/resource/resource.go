@@ -2,7 +2,8 @@ package resource
 
 import (
 	"fmt"
-	daptinid "github.com/daptin/daptin/server/id"
+
+	daptinid "github.com/L3m0nSo/Memories/server/id"
 
 	//sq  "github.com/Masterminds/squirrel"
 	//"github.com/jmoiron/sqlx"
@@ -12,8 +13,9 @@ import (
 	//uuid "github.com/google/uuid"
 	//"github.com/artpar/reflect"
 	//"time"
-	"github.com/jmoiron/sqlx"
 	"reflect"
+
+	"github.com/jmoiron/sqlx"
 )
 
 type StatusResponse struct {

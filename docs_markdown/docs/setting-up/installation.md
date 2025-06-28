@@ -4,27 +4,27 @@
 
 | Deployment preference      | Getting started                                                                                                               |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Heroku                     | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/daptin/daptin) |
-| Docker                     | docker run -p 8080:8080 [daptin/daptin](https://hub.docker.com/r/daptin/daptin)                                               |
+| Heroku                     | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/L3m0nSo/Memories) |
+| Docker                     | docker run -p 8080:8080 [L3m0nSo/Memories](https://hub.docker.com/r/L3m0nSo/Memories)                                               |
 | Kubernetes                 | [Service & Deployment YAML](#kubernetes)                                                                                      |
-| Development                | go get github.com/daptin/daptin                                                                                               |
-| Linux (386/amd64/arm5,6,7) | [Download static linux builds](https://github.com/daptin/daptin/releases)                                                     |
-| Windows                    | go get github.com/daptin/daptin                                                                                               |
-| OS X                       | go get github.com/daptin/daptin                                                                                               |
+| Development                | go get github.com/L3m0nSo/Memories                                                                                               |
+| Linux (386/amd64/arm5,6,7) | [Download static linux builds](https://github.com/L3m0nSo/Memories/releases)                                                     |
+| Windows                    | go get github.com/L3m0nSo/Memories                                                                                               |
+| OS X                       | go get github.com/L3m0nSo/Memories                                                                                               |
 | Load testing               | [Docker compose](#docker-compose)                                                                                             |
-| Raspberry Pi               | [Linux arm 7 static build](https://github.com/daptin/daptin/releases)                                                         |
+| Raspberry Pi               | [Linux arm 7 static build](https://github.com/L3m0nSo/Memories/releases)                                                         |
 
 
 
 ### Native binary
 
-Daptin is available as a native binary. You can download the binary for the following os from [github releases](https://github.com/daptin/daptin/releases)
+Daptin is available as a native binary. You can download the binary for the following os from [github releases](https://github.com/L3m0nSo/Memories/releases)
 
 - Windows 32/64
 - OS X  64
 - Linux  32/64/arm/mips
 
-[https://github.com/daptin/daptin/releases](https://github.com/daptin/daptin/releases)
+[https://github.com/L3m0nSo/Memories/releases](https://github.com/L3m0nSo/Memories/releases)
 
 Execute ```./daptin``` to run daptin.
 
@@ -60,7 +60,7 @@ db_connection_string |   Database Connection String
 
 Heroku is the best way to test out a live instance of daptin. Daptin has a very low memory footprint and can run smoothly even on heroku's smallest instance.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/daptin/daptin)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/L3m0nSo/Memories)
 
 Note: Heroku puts instances to sleep after 30 minutes of idleness, which will erase all the data. It will behave like a fresh instance when it wakes up. You can subscribe to their minimum paid plan to remove this sleep due to idleness.
 
@@ -70,11 +70,11 @@ Deploy the docker image
 
 Start ```daptin``` on your machine using docker
 
-```docker run -p 8080:8080 daptin/daptin```
+```docker run -p 8080:8080 L3m0nSo/Memories```
 
 
 
-[https://hub.docker.com/r/daptin/daptin/](https://hub.docker.com/r/daptin/daptin/)
+[https://hub.docker.com/r/L3m0nSo/Memories/](https://hub.docker.com/r/L3m0nSo/Memories/)
 
 
 ### Docker-compose
@@ -86,7 +86,7 @@ Docker compose is a great tool to bring up a mysql/postgres backed daptin instan
 version: '3'
 services:
     web:
-        image: daptin/daptin
+        image: L3m0nSo/Memories
         ports:
             - "8090:8080"
         restart: always
@@ -149,7 +149,7 @@ Daptin can be infinitely scaled on kubernetes
             tier: testing
         spec:
           containers:
-          - image: daptin/daptin:latest
+          - image: L3m0nSo/Memories:latest
             name: daptin
             args: ['-db_type', 'mysql', '-db_connection_string', 'user:password@tcp(<mysql_service>:3306)/daptin']
             ports:

@@ -2,14 +2,15 @@ package resource
 
 import (
 	"errors"
+	"strings"
+	"sync"
+
+	"github.com/L3m0nSo/Memories/server/auth"
 	"github.com/artpar/go-imap"
 	"github.com/artpar/go-imap/backend"
-	"github.com/daptin/daptin/server/auth"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
-	"strings"
-	"sync"
 )
 
 type DaptinImapUser struct {

@@ -1,14 +1,14 @@
 package dbresourceinterface
 
 import (
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/assetcachepojo"
+	"github.com/L3m0nSo/Memories/server/database"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/permission"
+	"github.com/L3m0nSo/Memories/server/rootpojo"
+	"github.com/L3m0nSo/Memories/server/table_info"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/assetcachepojo"
-	"github.com/daptin/daptin/server/database"
-	"github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/permission"
-	"github.com/daptin/daptin/server/rootpojo"
-	"github.com/daptin/daptin/server/table_info"
 	"github.com/jmoiron/sqlx"
 )
 

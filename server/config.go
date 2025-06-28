@@ -2,21 +2,22 @@ package server
 
 import (
 	json1 "encoding/json"
+	"os"
+	"path/filepath"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/fsm"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/L3m0nSo/Memories/server/rootpojo"
+	"github.com/L3m0nSo/Memories/server/table_info"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/fsm"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/daptin/daptin/server/rootpojo"
-	"github.com/daptin/daptin/server/table_info"
 	yaml2 "github.com/ghodss/yaml"
 	"github.com/gobuffalo/flect"
 	"github.com/naoina/toml"
 	log "github.com/sirupsen/logrus"
-	"os"
-	"path/filepath"
 )
 
-//import "github.com/daptin/daptin/datastore"
+//import "github.com/L3m0nSo/Memories/datastore"
 
 // Load config files which have the naming of the form schema_*_daptin.json/yaml
 func LoadConfigFiles() (resource.CmsConfig, []error) {

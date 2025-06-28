@@ -8,9 +8,9 @@ WORKDIR /opt/daptin
 
 COPY --from=certs /etc/ssl/certs /etc/ssl/certs
 
-COPY daptin-linux-amd64 /opt/daptin/daptin
-RUN chmod +x /opt/daptin/daptin
-RUN ls -lah /opt/daptin/daptin
+COPY daptin-linux-amd64 /opt/L3m0nSo/Memories
+RUN chmod +x /opt/L3m0nSo/Memories
+RUN ls -lah /opt/L3m0nSo/Memories
 
 
 
@@ -25,4 +25,4 @@ RUN ls -lah /opt/daptin/daptin
 
 
 EXPOSE 8080
-ENTRYPOINT ["/opt/daptin/daptin", "-runtime", "release", "-port", ":8080"]
+ENTRYPOINT ["/opt/L3m0nSo/Memories", "-runtime", "release", "-port", ":8080"]

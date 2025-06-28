@@ -2,7 +2,8 @@ package resource
 
 import (
 	"fmt"
-	"github.com/daptin/daptin/server/statementbuilder"
+
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"

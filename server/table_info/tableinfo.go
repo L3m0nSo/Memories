@@ -1,10 +1,10 @@
 package table_info
 
 import (
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/columns"
+	"github.com/L3m0nSo/Memories/server/fsm"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/columns"
-	"github.com/daptin/daptin/server/fsm"
 )
 
 type TableRelation struct {

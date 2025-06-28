@@ -2,14 +2,15 @@ package actions
 
 import (
 	"fmt"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/artpar/api2go/v2"
 	"github.com/artpar/go-guerrilla"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ses"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/resource"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
 )

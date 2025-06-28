@@ -4,9 +4,10 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/daptin/daptin/server/database"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/statementbuilder"
+
+	"github.com/L3m0nSo/Memories/server/database"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/jmoiron/sqlx"
 

@@ -1,15 +1,16 @@
 package resource
 
 import (
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/jmoiron/sqlx"
 	"strings"
+
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/jmoiron/sqlx"
 
 	"github.com/artpar/api2go/v2"
 
 	//"github.com/Masterminds/squirrel"
 
-	"github.com/daptin/daptin/server/auth"
+	"github.com/L3m0nSo/Memories/server/auth"
 	//"strings"
 	"fmt"
 )

@@ -1,9 +1,10 @@
 package rootpojo
 
 import (
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/permission"
 	"time"
+
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/permission"
 )
 
 type CloudStore struct {

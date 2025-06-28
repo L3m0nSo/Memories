@@ -5,17 +5,17 @@
 </h1>
 
 <p align="center">
-    <a href="https://travis-ci.org/daptin/daptin"><img alt="Travis" src="https://img.shields.io/travis/daptin/daptin.svg?style=flat-square"></a>
+    <a href="https://travis-ci.org/L3m0nSo/Memories"><img alt="Travis" src="https://img.shields.io/travis/L3m0nSo/Memories.svg?style=flat-square"></a>
     <a href='https://semaphoreci.com/artpar/daptin'> <img src='https://semaphoreci.com/api/v1/artpar/daptin/branches/master/badge.svg' alt='Build Status'></a>
-    <a href='https://circleci.com/gh/daptin/daptin'> <img src='https://circleci.com/gh/daptin/daptin.svg?style=svg' alt='Build Status'></a>	
+    <a href='https://circleci.com/gh/L3m0nSo/Memories'> <img src='https://circleci.com/gh/L3m0nSo/Memories.svg?style=svg' alt='Build Status'></a>	
 <p align="center">
     <a href="/LICENSE"><img alt="Software License" src="https://img.shields.io/badge/LICENSE-LGPL%20v3-brightgreen.svg?style=flat-square"></a>
-    <a href="https://goreportcard.com/report/github.com/daptin/daptin"><img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/daptin/daptin?style=flat-square"></a>
-    <a href="http://godoc.org/github.com/daptin/daptin"><img alt="Go Doc" src="https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square"></a>
+    <a href="https://goreportcard.com/report/github.com/L3m0nSo/Memories"><img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/L3m0nSo/Memories?style=flat-square"></a>
+    <a href="http://godoc.org/github.com/L3m0nSo/Memories"><img alt="Go Doc" src="https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square"></a>
 </p>
 <p align="center">
-    <a href="https://codecov.io/gh/daptin/daptin"><img alt="Codecov branch" src="https://img.shields.io/codecov/c/github/daptin/daptin/master.svg?style=flat-square"></a>
-    <a href="https://github.com/daptin/daptin/releases/latest"><img alt="Release" src="https://img.shields.io/github/release/daptin/daptin.svg?style=flat-square"></a>
+    <a href="https://codecov.io/gh/L3m0nSo/Memories"><img alt="Codecov branch" src="https://img.shields.io/codecov/c/github/L3m0nSo/Memories/master.svg?style=flat-square"></a>
+    <a href="https://github.com/L3m0nSo/Memories/releases/latest"><img alt="Release" src="https://img.shields.io/github/release/L3m0nSo/Memories.svg?style=flat-square"></a>
 </p>
 <p align="center">
      <a href="https://discord.gg/t564q8SQVk"><img src="https://img.shields.io/badge/JOIN-ON%20DISCORD-blue&?style=for-the-badge&logo=discord"></a> 
@@ -23,7 +23,7 @@
 
 
 <p align="center">
-	<a href="https://github.com/daptin/daptin/releases">Download</a> •
+	<a href="https://github.com/L3m0nSo/Memories/releases">Download</a> •
 	<a href="https://daptin.github.io/daptin/">Documentation</a> •
 	<a href="https://join.slack.com/t/daptin/shared_invite/enQtMzM1NTM1NTkyMDgzLTVlYzBlMmM4YjMyOTk0MDc5MWJmMzFlMTliNzQwYjcxMzc5Mjk0YzEyZDIwYTljZmE5NDU3Yjk3YzQ3MzhkMzI">Community</a>
 </p>
@@ -244,32 +244,32 @@ You want to open up few or many of actions to guests or users.
 Javascript/Typescript Client
 ===
 
-https://github.com/daptin/daptin-js-client
+https://github.com/L3m0nSo/Memories-js-client
 
 Starter kit: https://github.com/daptin/vue_typescript_starter_kit
 
 
 Define Schema
 
-<img src="https://github.com/daptin/daptin/raw/master/images/api.jpg">
+<img src="https://github.com/L3m0nSo/Memories/raw/master/images/api.jpg">
 
 Find
-<img src="https://github.com/daptin/daptin/raw/master/images/apigetall.png">
+<img src="https://github.com/L3m0nSo/Memories/raw/master/images/apigetall.png">
 
 Get By Id
-<img src="https://github.com/daptin/daptin/raw/master/images/apigetbyid.png">
+<img src="https://github.com/L3m0nSo/Memories/raw/master/images/apigetbyid.png">
 
 Create
-<img src="https://github.com/daptin/daptin/raw/master/images/apicreate.png">
+<img src="https://github.com/L3m0nSo/Memories/raw/master/images/apicreate.png">
 
 Delete
-<img src="https://github.com/daptin/daptin/raw/master/images/apidelete.png">
+<img src="https://github.com/L3m0nSo/Memories/raw/master/images/apidelete.png">
 
 Delete relations
-<img src="https://github.com/daptin/daptin/raw/master/images/apideleterelated.png">
+<img src="https://github.com/L3m0nSo/Memories/raw/master/images/apideleterelated.png">
 
 List relations
-<img src="https://github.com/daptin/daptin/raw/master/images/apifetchrelated.png">
+<img src="https://github.com/L3m0nSo/Memories/raw/master/images/apifetchrelated.png">
 
 
 

@@ -3,21 +3,22 @@ package server
 import (
 	"crypto/sha256"
 	"fmt"
-	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/apiblueprint"
-	"github.com/daptin/daptin/server/auth"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/daptin/daptin/server/table_info"
-	"github.com/gin-gonic/gin"
-	"github.com/jmoiron/sqlx"
-	log "github.com/sirupsen/logrus"
 	"image/color"
 	"net/http"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/apiblueprint"
+	"github.com/L3m0nSo/Memories/server/auth"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/L3m0nSo/Memories/server/table_info"
+	"github.com/artpar/api2go/v2"
+	"github.com/gin-gonic/gin"
+	"github.com/jmoiron/sqlx"
+	log "github.com/sirupsen/logrus"
 )
 
 func CreateApiBlueprintHandler(initConfig *resource.CmsConfig, cruds map[string]*resource.DbResource) func(ctx *gin.Context) {

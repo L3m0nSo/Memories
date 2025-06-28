@@ -3,14 +3,15 @@ package actions
 import (
 	"encoding/base64"
 	"fmt"
-	"github.com/artpar/api2go/v2"
-	"github.com/artpar/resty"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/jmoiron/sqlx"
-	log "github.com/sirupsen/logrus"
 	"reflect"
 	"strings"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/artpar/api2go/v2"
+	"github.com/artpar/resty"
+	"github.com/jmoiron/sqlx"
+	log "github.com/sirupsen/logrus"
 )
 
 type networkRequestActionPerformer struct {

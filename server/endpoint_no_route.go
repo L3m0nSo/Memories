@@ -2,15 +2,16 @@ package server
 
 import (
 	"fmt"
-	"github.com/daptin/daptin/server/resource"
-	"github.com/gin-gonic/gin"
-	"github.com/sirupsen/logrus"
 	"io"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
 	"time"
+
+	"github.com/L3m0nSo/Memories/server/resource"
+	"github.com/gin-gonic/gin"
+	"github.com/sirupsen/logrus"
 )
 
 func SetupNoRouteRouter(boxRoot http.FileSystem, defaultRouter *gin.Engine) {

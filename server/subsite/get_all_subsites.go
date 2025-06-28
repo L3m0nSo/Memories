@@ -1,8 +1,8 @@
 package subsite
 
 import (
-	"github.com/daptin/daptin/server/dbresourceinterface"
-	"github.com/daptin/daptin/server/statementbuilder"
+	"github.com/L3m0nSo/Memories/server/dbresourceinterface"
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"

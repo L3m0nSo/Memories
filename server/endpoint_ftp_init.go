@@ -1,9 +1,9 @@
 package server
 
 import (
-	"github.com/daptin/daptin/server/auth"
-	"github.com/daptin/daptin/server/dbresourceinterface"
-	"github.com/daptin/daptin/server/resource"
+	"github.com/L3m0nSo/Memories/server/auth"
+	"github.com/L3m0nSo/Memories/server/dbresourceinterface"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/fclairamb/ftpserver/server"
 	"github.com/jmoiron/sqlx"
 	"github.com/sirupsen/logrus"

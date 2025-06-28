@@ -3,21 +3,22 @@ package resource
 import (
 	"context"
 	"fmt"
+	"time"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/database"
+	"github.com/L3m0nSo/Memories/server/fsm"
+	"github.com/L3m0nSo/Memories/server/rootpojo"
+	"github.com/L3m0nSo/Memories/server/statementbuilder"
+	"github.com/L3m0nSo/Memories/server/subsite"
+	"github.com/L3m0nSo/Memories/server/table_info"
+	"github.com/L3m0nSo/Memories/server/task"
 	"github.com/artpar/api2go/v2"
 	"github.com/buraksezer/olric"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/database"
-	"github.com/daptin/daptin/server/fsm"
-	"github.com/daptin/daptin/server/rootpojo"
-	"github.com/daptin/daptin/server/statementbuilder"
-	"github.com/daptin/daptin/server/subsite"
-	"github.com/daptin/daptin/server/table_info"
-	"github.com/daptin/daptin/server/task"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/go-playground/validator.v9"
-	"time"
 )
 
 type CmsConfig struct {

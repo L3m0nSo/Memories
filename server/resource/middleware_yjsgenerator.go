@@ -3,13 +3,14 @@ package resource
 import (
 	"encoding/base64"
 	"fmt"
+	"strings"
+
+	daptinid "github.com/L3m0nSo/Memories/server/id"
 	"github.com/artpar/api2go/v2"
 	"github.com/artpar/ydb"
 	"github.com/buraksezer/olric"
-	daptinid "github.com/daptin/daptin/server/id"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
-	"strings"
 )
 
 type yjsHandlerMiddleware struct {

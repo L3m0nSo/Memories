@@ -5,13 +5,14 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	"github.com/daptin/daptin/server/actionresponse"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/jmoiron/sqlx"
 	"os"
 
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/jmoiron/sqlx"
+
+	"github.com/L3m0nSo/Memories/server/auth"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/auth"
 	"github.com/dop251/goja"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"

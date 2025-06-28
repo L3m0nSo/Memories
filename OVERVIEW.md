@@ -90,7 +90,7 @@ Builds the `main` executable with static linking flags (`ldflags='extldflags "st
 Stores the built executable (`main`) as an artifact named `daptin`.
 
 Runs tests (`go test`) with coverage enabled (`cover`, `coverprofile=coverage.out`). (Note: It seems configured to
-test against `github.com/daptin/daptin/...`, which might need adjustment depending on the actual module path).
+test against `github.com/L3m0nSo/Memories/...`, which might need adjustment depending on the actual module path).
 
 - **Configuration**: Uses aliases (`&testwithgomodules`, `&defaults`) for reusable steps.
 
@@ -144,7 +144,7 @@ Uses `crazymax/xgo` Docker image for crosscompilation.
 
 Targets: `linux/amd64`, `linux/arm64`, `darwin/amd64`, `darwin/arm64`, `windows/`.
 
-Builds Docker image (`daptin/daptin:`) using the crosscompiled Linux amd64 binary.
+Builds Docker image (`L3m0nSo/Memories:`) using the crosscompiled Linux amd64 binary.
 
 Pushes Docker image to Docker Hub using secrets (`DOCKERUSERNAME`, `DOCKERPASSWORD`).
 
@@ -209,7 +209,7 @@ Includes `README.md` and `LICENSE` in archives.
 
 - **Signing**: Configured to sign artifacts using GPG (key `artpar@gmail.com`).
 
-- **Release**: Targets the `daptin/daptin` GitHub repository, automatically marking nontag builds as prereleases.
+- **Release**: Targets the `L3m0nSo/Memories` GitHub repository, automatically marking nontag builds as prereleases.
 
 ### Containerization (`Dockerfile`, `Dockerfilearm`)
 
@@ -217,7 +217,7 @@ Uses a multistage build, starting with `alpine` to get CA certificates.
 
 Final stage based on `ubuntu`.
 
-Copies the precompiled `daptinlinuxamd64` binary into `/opt/daptin/daptin`.
+Copies the precompiled `daptinlinuxamd64` binary into `/opt/L3m0nSo/Memories`.
 
 Copies CA certificates.
 
@@ -225,7 +225,7 @@ Sets `WORKDIR` to `/opt/daptin`.
 
 Makes the binary executable.
 
-Sets the `ENTRYPOINT` to run `/opt/daptin/daptin runtime release port :8080`.
+Sets the `ENTRYPOINT` to run `/opt/L3m0nSo/Memories runtime release port :8080`.
 
 Note\*: Contains commentedout steps for installing `glibc` on Alpine, suggesting potential past compatibility issues or
 experiments.
@@ -252,7 +252,7 @@ experiments.
 - **`crossbuild/xgo.sh`**: Script to perform crosscompilation using the `crazymax/xgo` Docker image.
 
 - **`scripts/build.sh`**: Appears to be a primary build script that builds the `daptinweb` frontend, embeds assets
-  using `go.rice`, builds the Go binary, appends Rice data, and builds/tags a Docker image (`daptin/daptin`).
+  using `go.rice`, builds the Go binary, appends Rice data, and builds/tags a Docker image (`L3m0nSo/Memories`).
 
 - **`scripts/builddocs.sh`**: Builds the MkDocs documentation (`mkdocs build`) and copies the output to the `docs/`
   directory.
@@ -408,7 +408,7 @@ passing configuration via environment variables.
 - **Kubernetes (`kubernetes/`)**:
 
 `daptindeployment.yaml`: Defines a Kubernetes Service and Deployment for the Daptin application itself. It specifies
-the Docker image (`daptin/daptin:latest`) and passes database configuration via commandline arguments.
+the Docker image (`L3m0nSo/Memories:latest`) and passes database configuration via commandline arguments.
 
 `mysqldeployment.yaml`: Defines a Service, PersistentVolumeClaim, and Deployment for a MySQL database backend, using a
 Kubernetes secret (`mysqlpass`) for the root password.

@@ -13,7 +13,7 @@
   "scripts": {
     "heroku-postbuild": "echo This runs afterwards."
   },
-  "mount_dir": "src/github.com/daptin/daptin",
+  "mount_dir": "src/github.com/L3m0nSo/Memories",
   "website": "https://dapt.in",
-  "repository": "http://github.com/daptin/daptin"
+  "repository": "http://github.com/L3m0nSo/Memories"
 }

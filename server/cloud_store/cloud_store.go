@@ -2,12 +2,13 @@ package cloud_store
 
 import (
 	"encoding/json"
-	"github.com/daptin/daptin/server/dbresourceinterface"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/rootpojo"
-	"github.com/jmoiron/sqlx"
 	"strconv"
 	"time"
+
+	"github.com/L3m0nSo/Memories/server/dbresourceinterface"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/rootpojo"
+	"github.com/jmoiron/sqlx"
 )
 
 func StringOrEmpty(i interface{}) string {

@@ -1,7 +1,11 @@
 package server
 
 import (
-	"github.com/daptin/daptin/server/database"
+	"net/http"
+	"sync"
+	"time"
+
+	"github.com/L3m0nSo/Memories/server/database"
 	"github.com/gin-gonic/gin"
 	"github.com/shirou/gopsutil/v4/cpu"
 	"github.com/shirou/gopsutil/v4/disk"
@@ -11,9 +15,6 @@ import (
 	"github.com/shirou/gopsutil/v4/net"
 	"github.com/shirou/gopsutil/v4/process"
 	"github.com/shirou/gopsutil/v4/sensors"
-	"net/http"
-	"sync"
-	"time"
 )
 
 // StatCache holds cached statistics data with timestamps

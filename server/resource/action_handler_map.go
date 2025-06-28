@@ -1,5 +1,5 @@
 package resource
 
-import "github.com/daptin/daptin/server/actionresponse"
+import "github.com/L3m0nSo/Memories/server/actionresponse"
 
 var ActionHandlerMap = map[string]actionresponse.ActionPerformerInterface{}

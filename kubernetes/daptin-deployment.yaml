@@ -27,7 +27,7 @@ spec:
         tier: testing
     spec:
       containers:
-      - image: daptin/daptin:latest
+      - image: L3m0nSo/Memories:latest
         name: daptin
         args: ['-db_type', 'mysql', '-db_connection_string', 'testingmysqluser:testingmysqlpassword@tcp(100.70.180.186:3306)/daptin']
         ports:

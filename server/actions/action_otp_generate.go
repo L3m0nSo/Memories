@@ -3,18 +3,19 @@ package actions
 import (
 	"context"
 	"errors"
+	"net/http"
+	"net/url"
+	"time"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/auth"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/auth"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
 	"github.com/jmoiron/sqlx"
 	"github.com/pquerna/otp"
 	"github.com/pquerna/otp/totp"
 	log "github.com/sirupsen/logrus"
-	"net/http"
-	"net/url"
-	"time"
 )
 
 type otpGenerateActionPerformer struct {

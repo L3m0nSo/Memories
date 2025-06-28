@@ -1,8 +1,8 @@
 package fakerservice
 
 import (
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/resource"
 )
 
 func NewFakeInstance(columns []api2go.ColumnInfo) map[string]interface{} {

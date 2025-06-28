@@ -43,10 +43,10 @@ build:
         go test ./...
   - internal/docker-build:
       dockerfile: Dockerfile
-      image-name: daptin/daptin:wercker # name used to refer to this image until it's pushed
+      image-name: L3m0nSo/Memories:wercker # name used to refer to this image until it's pushed
   - internal/docker-push:
-      image-name: daptin/daptin:wercker
+      image-name: L3m0nSo/Memories:wercker
       username: $DOCKER_USERNAME # Docker Hub username. When using CLI, set using "export X_USERNAME=<username>"
       password: $DOCKER_PASSWORD # Docker Hub password. When using CLI, set using "export X_PASSWORD=<password>"
-      repository: docker.io/daptin/daptin
+      repository: docker.io/L3m0nSo/Memories
       tag: wercker

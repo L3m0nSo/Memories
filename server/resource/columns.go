@@ -1,12 +1,12 @@
 package resource
 
 import (
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/columns"
+	"github.com/L3m0nSo/Memories/server/fsm"
+	"github.com/L3m0nSo/Memories/server/table_info"
+	"github.com/L3m0nSo/Memories/server/task"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/columns"
-	"github.com/daptin/daptin/server/fsm"
-	"github.com/daptin/daptin/server/table_info"
-	"github.com/daptin/daptin/server/task"
 )
 
 func IsStandardColumn(colName string) bool {

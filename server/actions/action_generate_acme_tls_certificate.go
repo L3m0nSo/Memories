@@ -8,11 +8,17 @@ import (
 	"crypto/x509"
 	"encoding/pem"
 	"errors"
+	"net"
+	"net/http"
+	"net/url"
+	"strings"
+	"time"
+
+	"github.com/L3m0nSo/Memories/server/actionresponse"
+	"github.com/L3m0nSo/Memories/server/auth"
+	daptinid "github.com/L3m0nSo/Memories/server/id"
+	"github.com/L3m0nSo/Memories/server/resource"
 	"github.com/artpar/api2go/v2"
-	"github.com/daptin/daptin/server/actionresponse"
-	"github.com/daptin/daptin/server/auth"
-	daptinid "github.com/daptin/daptin/server/id"
-	"github.com/daptin/daptin/server/resource"
 	"github.com/gin-gonic/gin"
 	"github.com/go-acme/lego/v3/certcrypto"
 	"github.com/go-acme/lego/v3/certificate"
@@ -20,11 +26,6 @@ import (
 	"github.com/go-acme/lego/v3/registration"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
-	"net"
-	"net/http"
-	"net/url"
-	"strings"
-	"time"
 )
 
 // You'll need a user or account type that implements acme.User
